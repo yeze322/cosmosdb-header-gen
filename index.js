@@ -35,7 +35,7 @@ function _generateAuthorizationToken(verb, resourceType, resourceLink, date, mas
 function _createBase64Signature(b64Key, rawBody) {
   let body_buf = _strToArrayBuffer(rawBody);
   let key_buf = _strToArrayBuffer(atob(b64Key));
-  let sig_buf = new HMAC(key_buf).update(body_buf).digest();
+  let sig_buf = provideHMAC(key_buf, body_buf);
 
   let sig_raw = _bufferToString(sig_buf);
   let sig_b64 = btoa(sig_raw);
