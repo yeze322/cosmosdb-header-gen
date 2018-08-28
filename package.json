@@ -1,6 +1,6 @@
 {
   "name": "cosmosdb-header-gen",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "CosmosDB restful API header generator",
   "repository": {
     "type": "git",
