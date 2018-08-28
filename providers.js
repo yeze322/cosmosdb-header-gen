@@ -10,6 +10,5 @@ function provideHMAC(keyBytes, valueBytes) {
 
 module.exports = {
   provideUTCDate,
-  provideByteArray,
   provideHMAC,
 }
