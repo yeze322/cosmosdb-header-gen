@@ -5,7 +5,7 @@ const {
 } = require('./providers');
 
 
-function generateCosmosDBHeaders(method: string, resourceType: string, resourceLink: string, masterKey: string) {
+function generateCosmosDBHeaders(method, resourceType, resourceLink, masterKey) {
   const utcDate = provideUTCDate();
   const authToken = this._generateAuthorizationToken(method, resourceType, resourceLink, utcDate, masterKey);
 
