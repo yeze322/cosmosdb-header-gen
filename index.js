@@ -1,6 +1,5 @@
 const {
   provideUTCDate,
-  provideByteArray,
   provideHMAC,
 } = require('./providers');
 
@@ -61,3 +60,5 @@ function _strToArrayBuffer(str) {
 module.exports = {
   generateCosmosDBHeaders,
 }
+
+exports.generateCosmosDBHeaders = generateCosmosDBHeaders;
