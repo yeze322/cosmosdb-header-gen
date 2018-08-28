@@ -6,7 +6,7 @@ const {
 
 function generateCosmosDBHeaders(method, resourceType, resourceLink, masterKey) {
   const utcDate = provideUTCDate();
-  const authToken = this._generateAuthorizationToken(method, resourceType, resourceLink, utcDate, masterKey);
+  const authToken = _generateAuthorizationToken(method, resourceType, resourceLink, utcDate, masterKey);
 
   return {
     'Content-Type': 'application/json',
