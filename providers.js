@@ -5,7 +5,7 @@ function provideUTCDate() {
 }
 
 function provideHMAC(keyBytes, valueBytes) {
-  return new HMAC(keybuffer).update(valuebuffer).digest();
+  return new HMAC(keyBytes).update(valueBytes).digest();
 }
 
 module.exports = {
