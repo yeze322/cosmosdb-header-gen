@@ -33,7 +33,7 @@ function _generateAuthorizationToken(verb, resourceType, resourceLink, date, mas
   return encodeURIComponent("type=" + MasterToken + "&ver=" + TokenVersion + "&sig=" + signature);
 }
 
-function _createBase64Signature(b64Key: string, rawBody: string): string {
+function _createBase64Signature(b64Key, rawBody) {
   let body_buf = _strToArrayBuffer(rawBody);
   let key_buf = _strToArrayBuffer(atob(b64Key));
   let sig_buf = new HMAC(key_buf).update(body_buf).digest();
@@ -44,11 +44,11 @@ function _createBase64Signature(b64Key: string, rawBody: string): string {
   return sig_b64;
 }
 
-function _bufferToString(wordbuf: Uint8Array): string {
+function _bufferToString(wordbuf) {
   return String.fromCharCode.apply(null, wordbuf);
 }
 
-function _strToArrayBuffer(str: string): Uint8Array {
+function _strToArrayBuffer(str) {
   let len = str.length;
   let bytes = new Uint8Array(len);
 
